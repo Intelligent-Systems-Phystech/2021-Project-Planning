@@ -1,0 +1,49 @@
+\documentclass{beamer}
+\beamertemplatenavigationsymbolsempty
+\usecolortheme{beaver}
+\setbeamertemplate{blocks}[rounded=true, shadow=true]
+\setbeamertemplate{footline}[page number]
+%
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amssymb,amsfonts,amsmath,mathtext}
+\usepackage{subfig}
+\usepackage[all]{xy} % xy package for diagrams
+\usepackage{array}
+\usepackage{multicol}% many columns in slide
+\usepackage{hyperref}% urls
+\usepackage{hhline}%tables
+% Your figures are here:
+\graphicspath{ {fig/} {../fig/} }
+
+%----------------------------------------------------------------------------------------------------------
+\title[\hbox to 56mm{Задачи планирования}]{	Экспериментальное сравнение \\ задач оперативного планирования биохимического производства.}
+\author[В.\,В. Пырэу]{Виталий Вячеславович Пырэу}
+\institute{Московский физико-технический институт}
+\date{\footnotesize
+\par\smallskip\emph{Курс:} Автоматизация научных исследований\par (практика, В.\,В.~Стрижов)/Группа Б05-821
+\par\smallskip\emph{Эксперт:} С.\,А.~Тренин
+\par\bigskip\small 2021}
+%----------------------------------------------------------------------------------------------------------
+\begin{document}
+%----------------------------------------------------------------------------------------------------------
+\begin{frame}
+\thispagestyle{empty}
+\maketitle
+\end{frame}
+\begin{frame}{Моделирование времени, ограничений и требований к расписанию}
+
+Как кодировать последовательность запусков процессов?
+
+\begin{enumerate}
+	\item Дискретный индикатор времени $s_{i, t} = 1$ если задача $i$ началась в момент $t$.
+	\item Прореживание сетки + сдвиг влево (только $t$ кратные $t_0$)
+	\item Переменные длины временных промежутков.
+	\item Индикатор порядка задач: $b_{i, j} = 1$, если задача $i$ начинается раньше задачи $j$.
+\end{enumerate}
+
+\includegraphics[width=1.0\textwidth]{Plan}
+
+\end{frame}
+%----------------------------------------------------------------------------------------------------------
+\end{document} 
